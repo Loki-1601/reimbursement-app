@@ -8,6 +8,7 @@ Contents:-
 Frontend: React with Vite and Tailwind CSS.
 Backend: Django with Django Ninja.
 Database: SQLite
+
 How to Run the App
 
 Prerequisites:-
