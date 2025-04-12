@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict, field_validator
 from django.db.models.fields.files import FieldFile
 from .models import Receipt
 
-api = NinjaAPI()
+api = NinjaAPI(version="2.0.0", urls_namespace="test")
 
 class ReceiptOut(BaseModel):
     id: int
@@ -43,9 +43,10 @@ class ReceiptOut(BaseModel):
 def create_receipt(
     request,
     date: date = Form(...),
-    amount: str = Form(...),  
+    amount: str = Form(...),
     description: str = Form(...),
-    receipt_file: UploadedFile = File(None)  
+    receipt_file: UploadedFile = File(None)
+):
     from decimal import Decimal, InvalidOperation
     try:
         valid_amount = Decimal(amount)

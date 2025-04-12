@@ -1,12 +1,54 @@
-# React + Vite
+# Employee Reimbursement App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a minimal Employee Reimbursement Web Application. The project demonstrates a basic feature for employees to submit a receipt for reimbursement. It includes a frontend built with React (Vite, Tailwind CSS) and a backend API built with Django and Django Ninja. Database is SQLite.
 
-Currently, two official plugins are available:
+## Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** React with Vite and Tailwind CSS.
+- **Backend:** Django with Django Ninja.
+- **Database:** SQLite
 
-## Expanding the ESLint configuration
+## How to Run the App
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Python 3.8+ installed.
+- Node.js installed.
+- Git installed.
+
+### Backend Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Loki-1601/employee-reimbursement-app.git
+   cd employee-reimbursement-app/backend
+
+2. **Create and activate a virtual environment**
+    python3 -m venv venv
+    source venv/bin/activate
+
+3. **Install backend dependencies**
+    pip install -r requirements.txt
+
+4. **Apply migrations**
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+
+5. **Run the Developemnt server**
+    python3 manage.py runserver
+    **The API will be available at http://127.0.0.1:8000/api/submit**
+
+6. **Naviagate to Frontend folder**
+    cd ../frontend
+
+7. **Install all the frontened dependencies**
+    npm install
+
+8. **Run the developemnt server**
+    npm run dev
+    **The app should be available on the URL provided by Vite, mostly http://localhost:5173**
+
+9. **Running tests**
+    **Activate Virtual Environment in backend folder**
+    python3 manage.py test

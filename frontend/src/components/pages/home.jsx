@@ -9,7 +9,7 @@ function Home() {
         This application helps employees submit their purchase receipts 
         and view all submitted reimbursements quickly and easily.
       </p>
-      <div className="space-x-6">
+      <div className="space-x-10">
         <Link to="/upload">
           <button className="px-6 py-3 bg-blue-600 rounded-md text-white font-semibold hover:bg-blue-500 transition">
             Upload Receipt

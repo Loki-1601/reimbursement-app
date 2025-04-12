@@ -21,11 +21,9 @@ function UploadReceipt() {
     formData.append("date", date);
     formData.append("amount", amount);
     formData.append("description", description);
-    // Ensure this key matches your backend param name, e.g., receipt_file
     formData.append("receipt_file", file);
 
     try {
-      // Update the endpoint if needed, e.g. /api/receipts
       const response = await axios.post("http://127.0.0.1:8000/api/receipts", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
@@ -49,9 +47,7 @@ function UploadReceipt() {
   return (
     <div className="flex flex-col items-center py-10">
       <div className="bg-gray-800 text-white p-8 rounded-md shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">
-          📄 Receipt Upload
-        </h1>
+        <h1 className="text-2xl font-bold mb-6 text-center">📄 Receipt Upload</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block mb-1 text-gray-200 font-semibold">Purchase Date</label>
